@@ -16,12 +16,12 @@ namespace ClassIntro
 
             Kurs kurs2 = new Kurs();
             kurs2.KursAdi = "Java";
-            kurs2.Egitmeni = "Engin";
+            kurs2.Egitmeni = "Berk";
             kurs2.IzlenmeOrani = 64;
 
             Kurs kurs3 = new Kurs();
             kurs3.KursAdi = "Python";
-            kurs3.Egitmeni = "Berkay";
+            kurs3.Egitmeni = "Utku";
             kurs3.IzlenmeOrani = 70;
 
             Kurs[] kurslar = new Kurs[] { kurs1, kurs2, kurs3};
