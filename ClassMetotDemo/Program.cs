@@ -31,6 +31,7 @@ namespace ClassMetotDemo
             //Customer[] customers = new Customer[] { customer1, customer2, customer3 };
 
             List<Customer> customers = new List<Customer>();
+
             customers.Add(customer1);
             customers.Add(customer2);
             customers.Add(customer3);
@@ -46,6 +47,9 @@ namespace ClassMetotDemo
             customerManager.List2(customers);
 
             customerManager.Delete(customer1);
+            customerManager.Delete2(customer1, 1, customers);
+
+            customerManager.List2(customers);
 
             Console.ReadKey();
         }
