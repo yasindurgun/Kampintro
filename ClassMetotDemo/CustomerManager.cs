@@ -26,5 +26,16 @@ namespace ClassMetotDemo
                 Console.WriteLine("\n*****************\n");
             }
         }
+
+        public void List2(List<Customer> customers)
+        {
+            foreach (var customer in customers)
+            {
+                Console.WriteLine("Customer Name: " + customer.name);
+                Console.WriteLine("Customer Surname: " + customer.surname);
+                Console.WriteLine("Customer Address: " + customer.address);
+                Console.WriteLine("\n*****************\n");
+            }
+        }
     }
 }

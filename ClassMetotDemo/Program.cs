@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ClassMetotDemo
 {
@@ -21,15 +22,28 @@ namespace ClassMetotDemo
             customer3.surname = "Gök";
             customer3.address = "Ankara";
 
+            Customer customer4 = new Customer();
+            customer4.name = "Engin";
+            customer4.surname = "Demiroğ";
+            customer4.address = "Diyarbakır";
+
             //array
-            Customer[] customers = new Customer[] { customer1, customer2, customer3 };
+            //Customer[] customers = new Customer[] { customer1, customer2, customer3 };
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add(customer1);
+            customers.Add(customer2);
+            customers.Add(customer3);
+            customers.Add(customer4);
 
             CustomerManager customerManager = new CustomerManager();
             customerManager.Add(customer1);
             customerManager.Add(customer2);
             customerManager.Add(customer3);
 
-            customerManager.List(customers);
+            //customerManager.List(customers);
+
+            customerManager.List2(customers);
 
             customerManager.Delete(customer1);
 
