@@ -29,8 +29,8 @@ namespace Metotlar
 
             Console.WriteLine("--------Metotlar-------");
             //instance
-            //encapsulation
 
+            //encapsulation
             SepetManager sepetManager = new SepetManager();
             sepetManager.Ekle(product1);
             sepetManager.Ekle(product2);
