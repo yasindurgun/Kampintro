@@ -18,6 +18,9 @@ namespace OOP1
             //case sensitive
             ProductManager productManager = new ProductManager();
             productManager.Add(product1);
+            productManager.Update(product2);
+
+            Console.ReadKey();
         }
     }
 }

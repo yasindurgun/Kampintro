@@ -14,6 +14,8 @@ namespace Collections
             Console.WriteLine(isimler[1]);
             isimler.Add("Engin");
             Console.WriteLine(isimler[2]);
+            isimler.Add("Veli");
+            Console.WriteLine(isimler[3]);
 
             Console.ReadKey();
         }
