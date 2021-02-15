@@ -24,8 +24,8 @@ namespace OOP3
             ILoggerService databaseLoggerService = new DatabaseLoggerService();
             ILoggerService fileLoggerService = new FileLoggerService();
 
-            List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerService(), new FileLoggerService() };
-
+            //List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerService(), new FileLoggerService() };
+            List<ILoggerService> loggers = new List<ILoggerService> { databaseLoggerService, fileLoggerService };
 
             ReferenceManager referenceManager = new ReferenceManager();
             //alternatif kullanım
@@ -34,10 +34,13 @@ namespace OOP3
             referenceManager.Apply(housingCreditManager, loggers);
             Console.WriteLine("*******************");
             referenceManager.Apply(new TradesCreditManager(), new List<ILoggerService> {new DatabaseLoggerService(), new SmsLoggerService() });
+            Console.WriteLine("*******************");
+            referenceManager.Apply(new VehicleCreditManager(), loggers);
 
 
-            List<ICreditManager> credits = new List<ICreditManager>() { personalFinanceCreditManager, vehicleCreditManager };
-            //referenceManager.KrediOnBilgilendirmesiYap(credits);
+            Console.WriteLine("\nÖn Bilgilendirme.\n");
+            List<ICreditManager> credits = new List<ICreditManager>() { personalFinanceCreditManager, vehicleCreditManager, housingCreditManager };
+            referenceManager.KrediOnBilgilendirmesiYap(credits);
 
 
             Console.ReadKey();

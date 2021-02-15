@@ -12,8 +12,8 @@ namespace OOP3
         public void Apply(ICreditManager creditManager, List<ILoggerService> loggerServices)
         {
             //gönderilen kredinin hesapla metodu çalışır
-
             creditManager.Calculate();
+
             foreach (var loggerService in loggerServices)
             {
                 loggerService.Log();

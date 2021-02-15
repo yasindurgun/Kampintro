@@ -29,15 +29,17 @@ namespace OOP2
             customer2.CompanyName = "kodlama.io";
             customer2.TaxNo = "1234567890";
 
-            Customer customer3 = new IndividualCustomer();
+            Customer customer3 = new IndividualCustomer ();
+            customer3.Id = 3;
             Customer customer4 = new CorporateCustomer();
-
+            customer4.Id = 4;
             CustomerManager customerManager = new CustomerManager();
 
             customerManager.Add(customer1);
             customerManager.Add(customer2);
 
             customerManager.Add(customer3);
+            customerManager.Add(customer4);
         }
     }
 }
